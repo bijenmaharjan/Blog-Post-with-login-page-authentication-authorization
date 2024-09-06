@@ -4,28 +4,75 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Account</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
-    <div class="w-full h-screen bg-zinc-900">
-      <h1 class="text-3xl p-3 text-white">Create Account</h1>
-      <form action="/register" class="w-[300px] flex-col flex p-3 pt-10 gap-5 " method="post">
-        <input class="text-white bg-zinc-600 rounded-md p-3" type="text" placeholder="name" name="name">
-        <input class="text-white bg-zinc-600 rounded-md p-3" type="text" placeholder="username" name="username">
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+      <!-- Logo -->
+      <div class="flex justify-center mb-6">
+        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center">
+          <span class="text-white text-3xl font-bold">R</span>
+        </div>
+      </div>
 
-        <input class="text-white bg-zinc-600 rounded-md p-3" type="email" placeholder="email" name="email">
+      <!-- Title -->
+      <h2 class="text-2xl font-semibold text-center mb-6">Create Account</h2>
 
-        <input class="text-white bg-zinc-600 rounded-md p-3" type="text" placeholder="password" name="password">
+      <!-- Form -->
+      <form action="/register" method="post" class="space-y-4">
+        <!-- Name -->
+        <div>
+          <input type="text" name="name" placeholder="Name"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
 
-        <input class="text-white bg-zinc-600 rounded-md p-3" type="number" placeholder="age" name="age">
+        </div>
+        <div>
+          <input type="text" name="username" placeholder="Username"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
 
-        <input class="bg-pink-500 text-black opacity-3 p-3 rounded-sm" type="submit" value="Create Account">
+        </div>
 
+
+        <!-- Email -->
+        <div>
+          <input type="email" name="email" placeholder="Email address"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <input type="password" name="password" placeholder="Password"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
+        </div>
+
+        <!-- Retype Password -->
+        <div>
+          <input type="password" name="password_confirmation" placeholder="Confirm password"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
+        </div>
+
+        <div>
+          <input type="number" name="age" placeholder="Age"
+            class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500"
+            required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full bg-purple-500 text-white font-bold p-3 rounded-md hover:bg-purple-600 transition duration-200">Create
+          account</button>
       </form>
 
-
+      <!-- Sign In Link -->
+      <p class="text-center text-sm text-gray-600 mt-4">Already have an account? <a href="/login"
+          class="text-purple-500">Sign in</a></p>
     </div>
   </body>
 
